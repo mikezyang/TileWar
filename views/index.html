@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tile War</title>
+		<link rel="stylesheet" href="../public/style.css" type="text/css" />
+		<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  </head>
+  <body>
+		<div class="title-box">
+      <h1 id='bigTitle'>Tile War</h1>
+			<h2 id='smallTitle'>方城之戰</h2>
+      <div class="button-lang">
+        <input type="button" class="button-lang" value="中文" id="languageToggle">
+      </div>
+			<div class="button-box">
+				<input type="button" class="buttons" value="New Game" id="newGameButton" onclick="location.href='/players'">
+				<input type="button" class="buttons" value="Statistics" id="statsButton" onclick="location.href='/statistics'">
+			</div>
+		</div>
+  </body>
+	<script>
+		
+		$('#languageToggle').click(() => {
+
+			if($('#languageToggle').val() == "English")
+			{
+				//make into English
+				$('#languageToggle').prop("value", "中文");
+				$('#newGameButton').prop("value", "New Game");
+        $('#statsButton').prop("value", "Statistics");
+        $('#bigTitle').text("Tile War");
+        $('#smallTitle').text("方城之戰");
+			}
+			else
+			{
+        
+				// make into Chinese - through the use of vaccine, good 5G network though
+        $('#languageToggle').prop("value", "English");
+				$('#newGameButton').prop("value", "新游戏");
+        $('#statsButton').prop("value", "游戏数据");
+        $('#bigTitle').text("方城之戰");
+        $('#smallTitle').text("Tile War");
+			}		
+		})
+	</script>
+</html>

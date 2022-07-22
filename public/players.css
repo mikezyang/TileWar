@@ -1,0 +1,44 @@
+@import url("style.css");
+
+#settings
+{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  margin: 20px;
+}
+
+#continue
+{
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  margin: auto 250px 100px auto;
+}
+
+.players
+{
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-gap: 10px;
+}
+
+.namebox
+{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+
+select
+{
+  display: flex;
+  margin-top: 12px;
+  font-family: "Poppins", Helvetica;
+  font-size: 15px;
+}
+
+span
+{
+  display: flex;
+}

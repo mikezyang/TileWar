@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+body 
+{
+  font-family: "Poppins", Helvetica;
+	text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 30px;
+  color: white;
+  #background-image: url(https://jccmetrowest.org/wp-content/uploads/2021/08/Web_MahJongg-scaled.jpg);
+  background-image: url(https://d33wubrfki0l68.cloudfront.net/a8eee43eb10c76e6ee179e2638a765fb4d6f69f9/8fc35/static/waves_green-67a53bd9125a2c87657051177a14de2c.jpg);
+  background-position: center;
+  background-repeat: no;
+  background-size: cover;
+  text-shadow: 2px 2px black;
+}
+
+button-box
+{
+  text-align: center;
+}
+
+.buttons
+{
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin: auto auto 10px auto;
+  width: 150px;
+  align-items: center;
+}
+
+.button-lang
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  background-color: white;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.buttons:hover, .button-lang:hover
+{
+  background-color: #7FFFD4;
+}

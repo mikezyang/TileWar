@@ -1,0 +1,11 @@
+@import url("style.css");
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+h1
+{
+	font-size: 95px;	
+}

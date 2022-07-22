@@ -1,0 +1,13 @@
+@import url("style.css");
+
+
+.main
+{
+  position: relative;
+  line-height: 5px;
+  width: 100vw;
+  height: 90vh;
+  min-height: 300px;
+  min-width: 200px;
+  margin: auto;
+}

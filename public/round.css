@@ -1,0 +1,58 @@
+@import url("style.css");
+
+.main
+{
+  position: relative;
+  line-height: 5px;
+  width: 100vw;
+  height: 90vh;
+  min-height: 300px;
+  min-width: 200px;
+  margin: auto;
+}
+
+.round-num
+{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  margin: 20px;
+}
+
+.east
+{
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translate(0, -50%);
+}
+
+.west
+{
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(0, -50%);
+}
+
+.north
+{
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.south
+{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.endRound
+{
+  position: relative;
+  left: 0;
+  top: 45%;
+}
+
