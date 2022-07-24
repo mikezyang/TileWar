@@ -28,9 +28,40 @@
 	       <p>South</p>
 	       <p>Player 2 Name</p>
 	     </div>
+
+
+
+<!-- End of Round pop-up -->
+      <div class="endRound_popup" id="endRound_popup">
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="close-btn" onclick="togglePopup()"> &times; </div>
+          <h4>Round</h4>
+        </div>
+      </div>
+
+<!-- Button for pop-up -->
 	     <div class="endRound">
-	       <input type="button" class="buttons" value="End Round" id="endRound">
+	       <input type="button" class="buttons" value="End Round" id="endRound" onclick="togglePopup()">
 	     </div>
+
+<!-- Button for returning to home screen -->
+	     <div class="home">
+	       <input type="button" class="buttons" value="Home" id="home" onclick="location.href='/'">
+	     </div>
+
+       
 	  </div>
 	</body>
+
+	<script>
+    // function for toggling pop-up
+    function togglePopup()
+      {
+        document.getElementById("endRound_popup").classList.toggle("active");
+      }   
+	</script>
+  
+
+  
 </html>

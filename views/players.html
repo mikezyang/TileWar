@@ -6,16 +6,35 @@
 	</head>
 	<body>
 	  <div class="main">
-	    <div class="settings">
+
+      
+<!-- 	    <div class="settings">
 	      <input type="button" class="buttons" value="Settings" id="settings">
-	    </div>
+      </div> -->
+
+
+
+
+      <div class="settings_popup" id="settings_popup">
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="close-btn" onclick="togglePopup()"> &times; </div>
+          <h4>Settings</h4>
+        </div>
+      </div>
+
+      <div class="settings" id="settings">
+        <button class="buttons" onclick="togglePopup()"> Settings </button>
+       </div> 
+
+      
+      
 	    <div class="players">
 	      <div class="north">
 	        <span> North: </span>
 	      </div>
-	      
 	      <div class="option">
-	        <select name="north" id="north" onchange="newPlayer()">
+	        <select name="north" id="north" onchange="newPlayer(this)">
 	          <option value="select">-- Select -- </option>
 	          <option value="newPlayer">New Player</option>
 	        </select>
@@ -31,44 +50,84 @@
 	        <span>East:</span>
 	      </div>
 	      <div class="option">
-	        <select name="east" id="east">
+	        <select name="east" id="east" onchange="newPlayer(this)">
 	          <option value="select">-- Select -- </option>
 	          <option value="newPlayer">New Player</option>
 	        </select>
+					<input 
+	          type="text" 
+	          placeholder="Enter your name"
+	          class="namebox"
+            id="eastNamebox"
+						style='visibility:hidden'
+	          />
 	      </div>
 	      <div class="south">
 	        <span>South: </span>
 	      </div>
 	      <div class="option">
-	        <select name="south" id="south">
+	        <select name="south" id="south" onchange="newPlayer(this)">
 	          <option value="select">-- Select -- </option>
 	          <option value="newPlayer">New Player</option>
 	        </select>
+					<input 
+	          type="text" 
+	          placeholder="Enter your name"
+	          class="namebox"
+            id="southNamebox"
+						style='visibility:hidden'
+	          />
 	      </div>
 	      <div class="west">
 	        <span>West: </span>
 	      </div>
 	      <div class="option">
-	        <select name="west" id="west">
+	        <select name="west" id="west" onchange="newPlayer(this)">
 	          <option value="select">-- Select -- </option>
 	          <option value="newPlayer">New Player</option>
 	        </select>
+					<input 
+	          type="text" 
+	          placeholder="Enter your name"
+	          class="namebox"
+            id="westNamebox"
+						style='visibility:hidden'
+	          />
 	      </div>
 	      </p>
+	    </div>
+      
+  	  <div class="continue">
+  	    <input type="button" class="buttons" value="Continue" id="continue" onclick="location.href='/round'">
+  	  </div>
+
+      <!-- Button for returning to home screen -->
+      <div class="home">
+        <input type="button" class="buttons" value="Home" id="home" onclick="location.href='/'">
+      </div>
+
+      
 	  </div>
-	  <div class="continue">
-	    <input type="button" class="buttons" value="Continue" id="continue" onclick="location.href='/round'">
-	  </div>
-	  </div>
+
+  
 	</body>
+  
 	<script>
-		function newPlayer() {
-			var option = $('#north');
+		function newPlayer(elem) {
+			var option = $('#' + elem.id);
 			if (option.val() == 'newPlayer') {
-				$('#northNamebox').prop('style', 'visibility:visible')
+				$('#' + elem.id + 'Namebox').prop('style', 'visibility:visible')
 			} else {
-				$('#northNamebox').prop('style', 'visibility:hidden')
-			}
-		}
+				$('#' + elem.id + 'Namebox').prop('style', 'visibility:hidden')
+			};
+		};
+
+    function togglePopup()
+      {
+        document.getElementById("settings_popup").classList.toggle("active");
+      }
+
+    
 	</script>
+  
 </html>

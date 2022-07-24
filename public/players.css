@@ -1,5 +1,32 @@
 @import url("style.css");
 
+
+button-box
+{
+  text-align: center;
+}
+
+
+.buttons
+{
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin: auto auto 10px auto;
+  width: 150px;
+  align-items: center;
+}
+
+.buttons:hover
+{
+  background-color: #7FFFD4;
+}
+
+
+
 #settings
 {
   position: fixed;
@@ -8,12 +35,71 @@
   margin: 20px;
 }
 
-#continue
+.settings_popup .overlay
 {
   position: fixed;
-  bottom: 0px;
-  right: 0px;
-  margin: auto 250px 100px auto;
+  top:0px;
+  left:0px;
+  width:100vw;
+  height:100vh;
+  background:rgba(0,0,0,0.7);
+  z-index:1;
+  display:none;
+}
+.settings_popup .content
+{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%) scale(0);
+  width:200px;
+  height:200px;
+  background:#fff;
+  z-index:2;
+  text-align:center;
+  padding: 20px;
+  box-sizing:border-box;
+}
+
+.settings_popup .close-btn
+{
+  cursor:pointer;
+  position: absolute;
+  top:20px;
+  right:20px;
+  width:30px;
+  height:30px;
+  background:#222;
+  color:#fff;
+  font-size:25px;
+  font-weight:600;
+  line-height:30px;
+  text-align:center;
+  border-radius:50%;
+}
+
+.settings_popup.active .overlay
+{
+  display:block;
+}
+
+.settings_popup.active .content
+{
+  transform:translate(-50%,-50%) scale(1);
+}
+
+
+
+.continue
+{
+  position: relative;
+}
+
+#continue
+{
+  position: absolute;
+  bottom: -75px;
+  right: 20px;
 }
 
 .players
@@ -23,12 +109,11 @@
   grid-gap: 10px;
 }
 
-.namebox
-{
-  display: grid;
-  grid-template-columns: auto auto;
+.option {
+	display: grid;
+	grid-template-columns: 100px 100px;
+	grid-gap: 10px;
 }
-
 
 select
 {
@@ -41,4 +126,12 @@ select
 span
 {
   display: flex;
+}
+
+.home
+{
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 20px;
 }

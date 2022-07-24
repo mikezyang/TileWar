@@ -1,11 +1,26 @@
 @import url("style.css");
 
-body {
-	display: flex;
-	flex-direction: column;
+.box
+{
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+	text-align: left;
+}
+
+.heading
+{
+  margin: auto;
 }
 
 h1
 {
-	font-size: 95px;	
+  font-size: 150px;
+  margin: 0;
+}
+
+h2
+{
+  font-size: 30px;
+  margin: 0;
 }
